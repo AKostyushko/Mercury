@@ -1,0 +1,361 @@
+.index{
+	& .bg{
+		width:100%;
+		height:100vh;
+		background-color:#000;
+
+		@include respond-to(mobile-m){
+			border-top:20px solid #f44236;
+			&.purple{
+				border-top:20px solid #5548A5;
+			}
+		}
+	}
+	& .circles{
+		position:absolute;
+		top:0px;
+		bottom:0px;
+		left:0px;
+		right:0px;
+		width:100%;
+		overflow:hidden;
+
+		& div{
+			position:absolute;
+			&:nth-child(1){
+				top:0px;
+				left:25%;
+				width:480px;
+				height:480px;
+				@include radius(1000px);
+
+				@include respond-to(mobile-m){
+					width:280px;
+					height:280px;
+					top:20px;
+					left:auto;
+					right:-140px;
+				}
+
+				&.circle_red{
+					@include blur(#c02d1e, 60px);
+				}
+				&.circle_purple{
+					@include blur(#5548A5, 60px);
+				}
+			}
+			&:nth-child(2){
+				bottom:90px;
+				left:25%;
+				width:22px;
+				height:22px;
+				border:1px solid #fff;
+				@include radius(1000px);
+
+				@include respond-to(mobile-m){
+					left:auto;
+					right:5px;
+					bottom:5px;
+				}
+
+				&.circle_red{
+					@include blur(#c02d1e, 12px);
+				}
+				&.circle_purple{
+					@include blur(#5548A5, 12px);
+				}
+			}
+			&:nth-child(3){
+				top:48%;
+				right:20%;
+				width:80px;
+				height:80px;
+				@include radius(1000px);
+				&.circle_red{
+					@include blur(#c02d1e, 38px);
+				}
+				&.circle_purple{
+					@include blur(#5548A5, 38px);
+				}
+			}
+			&:nth-child(4){
+				bottom:50px;
+				right:30%;
+				width:230px;
+				height:230px;
+				@include radius(1000px);
+
+				@include respond-to(mobile-m){
+					top:400px;
+					bottom:auto;
+					left:-115px;
+					right:auto;
+				}
+				&.circle_orange{
+					@include blur(#d36002, 55px);
+				}
+				&.circle_grey{
+					@include blur(#9F9F9F, 55px);
+				}
+			}
+			&:nth-child(5){
+				bottom:225px;
+				left:20%;
+				width:65px;
+				height:65px;
+				@include radius(1000px);
+
+				@include respond-to(mobile-m){
+					top:40px;
+					bottom:auto;
+					left:-33px;
+				}
+
+				&.circle_orange{
+					@include blur(#d36002, 25px);
+				}
+				&.circle_grey{
+					@include blur(#9F9F9F, 25px);
+				}
+			}
+			&:nth-child(6){
+				top:220px;
+				right:30%;
+				width:23px;
+				height:23px;
+				@include radius(1000px);
+
+				@include respond-to(mobile-m){
+					top:10px;
+					right:50%;
+				}
+
+				&.circle_orange{
+					@include blur(#d36002, 8px);
+				}
+				&.circle_purple{
+					@include blur(#5548A5, 8px);
+				}
+			}
+		}
+	}
+	& .block{
+		position:absolute;
+		top:0px;
+		bottom:0px;
+		left:0px;
+		right:0px;
+		width:426px;
+		height:612px;
+		margin:auto;
+		box-sizing:border-box;
+		text-align:center;
+
+		@include respond-to(mobile-m){
+			position:relative;
+			width:88%;
+			top:44px;
+			bottom:auto;
+			height:auto;
+		}
+
+		&.wide{
+			width:480px;
+			height:612px;
+			@include respond-to(mobile-m){
+				position:relative;
+				width:88%;
+			}
+			& .logo{
+				top:78px;
+				width:214px;
+				height:109px;
+				background-image:url("../img/logo_index_s.png");
+			}
+			& .circle{
+				width:165px;
+				height:165px;
+				padding:8px;
+	
+				& > div{
+					width:147px;
+					height:147px;
+					padding:8px;
+	
+					& div{
+						width:129px;
+						height:129px;
+					}
+				}
+			}
+			& .text{
+				padding-bottom:25px;
+				color:#808080;
+			}
+		}
+		& .bg_white{
+			background-color:#fff;
+			border-left:1px solid #f5f2f2;
+			border-right:1px solid #f5f2f2;
+		}
+		& .image_block{
+			padding:40px 0px 40px 0px;
+			background:url("../img/shadow_index.png") no-repeat center bottom;
+			border-top:1px solid #f5f2f2;
+			&.noshadow{
+				padding-bottom:15px;
+				background:none;
+			}
+		}
+		& .logo{
+			position:absolute;
+			top:84px;
+			left:0px;
+			right:0px;
+			width:244px;
+			height:124px;
+			margin:auto;
+			background-image:url("../img/logo_index.png");
+		}
+		& .circle{
+			display:inline-block;
+			width:194px;
+			height:194px;
+			padding:10px;
+			border:1px solid #F5F5F5;
+			@include radius(200px);
+
+			& > div{
+				width:172px;
+				height:172px;
+				padding:10px;
+				border:1px solid #F5F5F5;
+				@include radius(200px);
+
+				& div{
+					width:150px;
+					height:150px;
+					background:linear-gradient(180deg, #EDEDED 0%, #CCCCCC 100%);
+					@include radius(200px);
+				}
+			}
+		}
+		& .text_block{
+			padding:0px 56px;
+			text-align:left;
+			@include respond-to(mobile-m){
+				padding:0px 32px;
+			}
+		}
+		& .title_small{
+			padding-top:20px;
+			font-size:20px;
+			@include respond-to(mobile-m){
+				font-size:16px;
+			}
+		}
+		& .title{
+			padding:4px 0px 16px;
+			letter-spacing:0px;
+			font-size:40px;
+			font-weight:bold;
+			font-family:"BarlowExtraBold", Arial;
+			@include respond-to(mobile-m){
+				font-size:32px;
+			}
+		}
+		& .digits{
+			padding:20px 0px 14px;
+			text-align:center;
+			font-size:72px;
+		}
+		& .text{
+			padding-bottom:56px;
+			line-height:22px;
+			font-size:14px;
+			@include respond-to(mobile-m){
+				padding-bottom:30px;
+				font-size:13px;
+			}
+		}
+		& .dotted{
+			width:100%;
+			height:24px;
+			& > div{
+				&:nth-child(1){
+					float:left;
+					position:relative;
+					width:12px;
+					height:24px;
+					overflow:hidden;
+					&:after{
+						content:"";
+						position:absolute;
+						top:0px;
+						left:-12px;
+						width:24px;
+						height:24px;
+						box-shadow:0px 0px 0px 2000px #fff;
+						border-radius:100%;
+					}
+				}
+				&:nth-child(2){
+					float:left;
+					width:100%;
+					margin:0px -12px;
+					& div{
+						height:24px;
+						margin:0px 12px;
+						background:#fff url("../img/dotted_index.gif") repeat-x center;
+					}
+				}
+				&:nth-child(3){
+					float:right;
+					position:relative;
+					width:12px;
+					height:24px;
+					overflow:hidden;
+					&:after{
+						content:"";
+						position:absolute;
+						top:0px;
+						right:-12px;
+						width:24px;
+						height:24px;
+						box-shadow:0px 0px 0px 2000px #fff;
+						border-radius:100%;
+					}
+				}
+			}
+		}
+		& .enter{
+			position:relative;
+			padding:33px 56px 44px;
+			text-align:left;
+			cursor:pointer;
+			color:#F44236;
+			font-size:20px;
+			font-weight:bold;
+			@include respond-to(mobile-m){
+				font-size:16px;
+				padding:21px 32px 32px;
+			}
+
+			& a{
+				display:block;
+				color:#F44236;
+				background-image:url("../img/arrow_red.svg");
+				background-size:7% auto;
+				background-position:top right;
+				background-repeat:no-repeat;
+				@include respond-to(mobile-m){
+					background-position:2px right;
+				}
+			}
+		}
+		& .btn{
+			margin-bottom:60px;
+		}
+	}
+}
+
